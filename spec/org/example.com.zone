@@ -1,0 +1,17 @@
+$TTL    86400
+@               IN SOA  ns.example.com.       root.example.com. (
+                  2017071700      ; Serial
+                  3H              ; refresh
+                  15M             ; retry
+                  2W              ; expiry
+                  1D )            ; minimum
+
+@               IN NS        ns.example.com.
+@               IN NS        2nd.dnsv.jp.
+@               A            192.0.2.0
+
+ns              A            192.0.2.1
+www             A            192.0.2.2
+bar.baz         A            192.0.2.3
+
+; token area
