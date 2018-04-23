@@ -1,0 +1,14 @@
+name: example.com
+zonefile: /le/example.com.zone
+nameserver: 
+  - 163.44.76.202
+domains:
+  - example.com
+  - "*.example.com"
+authkey: authkey/example.com.pem
+certdir: cert/example.com
+logfile: log/example.com.log
+commands:
+   - service nsd restart
+endpoint: https://acme-v02.api.letsencrypt.org
+mail: root@example.com

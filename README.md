@@ -5,25 +5,14 @@
 
 make core.rb(below).and add `00 1 * * * nsd ruby core.rb` to your corntab file
 ```
-  Letsencrypt::Dns01::BIND9.new({
-    name: 'example.com',
-    zonefile: '/etc/nsd/example.com.zone',
-    nameserver: [ '203.0.113.0' ],
-    domains: [
-      'example.com',
-      'www.example.com' 
-    ],
-    authkey: '/acme/authkey/example.com.pem',
-    certdir: '/acme/example.com',
-    logfile: '/var/log/letsencrypt_example.com.log',
-    commands: [
-       'service nsd restart',
-       #'nginx -s reload',
-    ],
-    endpoint: 'https://acme-staging.api.letsencrypt.org',
-    mail: 'hogehoge@hotmail.com',
-  }).update()
+  Letsencrypt::Dns01::BIND9.new(YAML.load_file('example.com.yml')).update()
 ```
+
+revoke cert
+```
+  Letsencrypt::Dns01::BIND9.new(YAML.load_file('example.com.yml')).core.revoke()
+```
+
 
 ## Development
 

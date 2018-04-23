@@ -1,0 +1,29 @@
+GIT
+  remote: git://github.com/unixcharles/acme-client.git
+  revision: 9cffda86d079c22eed7162b21a2f430a8920165d
+  branch: acme-v2
+  specs:
+    acme-client (0.6.3)
+      faraday (~> 0.9, >= 0.9.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.2)
+    faraday (0.15.0)
+      multipart-post (>= 1.2, < 3)
+    method_source (0.9.0)
+    multipart-post (2.0.0)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  acme-client!
+  pry
+
+BUNDLED WITH
+   1.15.4

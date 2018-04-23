@@ -1,7 +1,7 @@
 /.bundle/
 /vendor/
 /.yardoc
-/Gemfile.lock
+#/Gemfile.lock
 /_yardoc/
 /coverage/
 /doc/
@@ -9,3 +9,4 @@
 /spec/reports/
 /spec/data/
 /tmp/
+sai*
